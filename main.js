@@ -6,6 +6,8 @@ if(typeof(ljComment) == 'undefined') {
     var ljComment = {
         commentBox: "ytcb-text",
         commentSend: "ytcb-reply",
+        messageClass: "content video-title-visible",
+        replyButton: "comment-footer-action yt-commentbox-show-reply",
         replyList: [
             "哈哈哈。",
             "哈哈哈，謝謝，感謝支持啊！",
@@ -105,10 +107,33 @@ ljComment.displayReplyList = function () {
     document.body.appendChild(selectPanel);
 };
 
+/**
+ * 自動打開回應
+ */
+ljComment.autoOpenComment = function () {
+    var messagesList = document.getElementsByClassName(ljComment.messageClass);
+
+    for (var index = 0; index < messagesList.length; index++)
+    {
+        var messages = messagesList[index];
+
+        messages.onmouseover = function () {
+            var button = this.getElementsByClassName(ljComment.replyButton)[0];
+
+            if (button)
+            {
+                button.click();
+            }
+        };
+    }
+};
+
 ljComment.init = function () {
     ljComment.keyListener();
 
     ljComment.displayReplyList();
+
+    ljComment.autoOpenComment();
 };
 
 ljComment.init();
