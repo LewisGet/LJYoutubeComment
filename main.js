@@ -73,9 +73,12 @@ ljComment.keyListener = function () {
             ljComment.textSelectModule = true;
         }
 
-        var replyText = ljComment.doExecute(e.keyCode);
+        if (ljComment.textSelectModule)
+        {
+            var replyText = ljComment.doExecute(e.keyCode);
 
-        ljComment.inputText(replyText);
+            ljComment.inputText(replyText);
+        }
     });
 
     document.addEventListener("keyup", function(e){
