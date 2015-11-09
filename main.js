@@ -9,15 +9,16 @@ if(typeof(ljComment) == 'undefined') {
         messageClass: "content video-title-visible",
         replyButton: "comment-footer-action yt-commentbox-show-reply",
         replyList: [
+            "好喔！",
+            "哈哈哈，謝謝你喜歡我的影片 : ) 感謝支持啊！",
             "哈哈哈。",
-            "哈哈哈，謝謝，感謝支持啊！",
             "請參考 http://lj.dsa.tw/qna.html 喔！",
             "哦哦哦！原來如此！",
             "抱歉久等囉！",
             "感謝支持啊！",
             "嗨嗨！",
-            "我們會嘗試看看的。",
-            "哈哈哈，太太太感謝支持啦！"
+            "我們會去玩看看得。 : )",
+            "我們會進量努力得。 : )",
         ],
         textSelectModule: false,
         pluginExecute: []
