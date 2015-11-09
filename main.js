@@ -110,3 +110,5 @@ ljComment.init = function () {
 
     ljComment.displayReplyList();
 };
+
+ljComment.init();
